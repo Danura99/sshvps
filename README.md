@@ -18,7 +18,7 @@ UPDATE 02/04/2021
 
 ## :book: Installation
 
-apt update; apt upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/PROYECTOS_DESCONTINUADOS/master/NEW-ULTIMATE-VPS-MX-8.0/VPS-MX-Oficial/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
+apt update; apt upgrade -y; wget https://raw.githubusercontent.com/Danura99/sshvps/main/VPS-MX; chmod 777 VPS-MX* && ./VPS-MX*
 
 ```
 VPS-MX (las dependencias faltantes se instalarán automáticamente)
