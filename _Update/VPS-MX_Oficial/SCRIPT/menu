@@ -161,7 +161,7 @@ done
 msg -bar2
 unset selection
 while [[ ${selection} != @([1-8]) ]]; do
-echo -ne "\033[1;37m$(fun_trans "Selecione una Opcion"): " && read selection
+echo -ne "\033[1;37m$(fun_trans "Select an Option"): " && read selection
 tput cuu1 && tput dl1
 done
 [[ -e /etc/texto-adm ]] && rm /etc/texto-adm
@@ -717,7 +717,7 @@ local selection="null"
 local range
 for((i=0; i<=$1; i++)); do range[$i]="$i "; done
 while [[ ! $(echo ${range[*]}|grep -w "$selection") ]]; do
-echo -ne "\033[1;37m$(fun_trans "Selecione una Opcion"): " >&2
+echo -ne "\033[1;37m$(fun_trans "Select an Option"): " >&2
 read selection
 tput cuu1 >&2 && tput dl1 >&2
 done
@@ -918,11 +918,11 @@ msg -bar
 }
 # NOVO SISTEMA DE MENUS
 msg -bar
-menu_func "MANAGE ACCOUNTS  | SSH/SSL/DROPBEAR" "MANAGE ACCOUNTS | SS/SSRR"   "\033[1;100mINSTALADORES DE PROTOCOLOS" "PUERTOS ACTIVOS" "HERRAMIENTAS y EXTRAS" "CAMBIAR COLORES DEL PANEL" "MONITOR DE PROTOCOLOS --------> ${monitorservi}" " AUTO INICIAR SCRIPT ----------> $AutoRun " "-vd ACTUALIZAR PANEL" 
-echo -ne "$(msg -verd " [10]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;31m ❌ DESINSTALAR PANEL ❌ "
+menu_func "MANAGE ACCOUNTS  | SSH/SSL/DROPBEAR" "MANAGE ACCOUNTS | SS/SSRR"   "\033[1;100mPROTOCOL INSTALLERS" "ACTIVE PORTS" "TOOLS and EXTRAS" "CHANGE PANEL COLORS" "PROTOCOL MONITOR --------> ${monitorservi}" " AUTO START SCRIPT ----------> $AutoRun " "-vd TO UPDATE PANEL" 
+echo -ne "$(msg -verd " [10]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;31m ❌ UNINSTALL PANEL ❌ "
 msg -bar
-echo -ne "$(msg -verd " [11]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;97m CREDITOS "
-msg -bar && echo -ne "$(msg -verd " [0]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;41m  ❗️ SALIR DEL SCRIPT ❗️ "
+echo -ne "$(msg -verd " [11]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;97m CREDITS "
+msg -bar && echo -ne "$(msg -verd " [0]") $(msg -verm2 "=>>") "&& msg -bra "\033[1;41m  ❗️ EXIT SCRIPT ❗️ "
 msg -bar
 # FIM
 selection=$(selection_fun 11)
