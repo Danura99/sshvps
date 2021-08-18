@@ -21,9 +21,9 @@ SCRIPT_NAME=vpsmxup
 
 ## Title and graphics
 msg -bar2
-echo -e " \e[97m\033[1;41m   =====>>►► 🐲 SCRIPT - VPS•MX ®️ 🐲 ◄◄<<=====     \033[1;37m"
+echo -e " \e[97m\033[1;41m   =====>>►►  😍✦✫POWERD BY DANURA✫✦😍 ◄◄<<=====     \033[1;37m"
 msg -bar2
-msg -ama "              PREPARANDO ACTUALIZACIONES"
+msg -ama "              PREPARING UPDATES"
 msg -bar2
 sleep 5s
 
@@ -59,12 +59,12 @@ if ! [ $(id -u) = 0 ]; then
 
 		echo ""
 		echo "vvvvvvvvvvvvvvvvvvvv"
-		echo "    Erro Fatal!!"
+		echo "    fatal error!!"
 		echo "^^^^^^^^^^^^^^^^^^^^"
-		echo "Este script debe ejecutarse como root!"
+		echo "This script must be run as root!"
 
 		printTitle "How to fix it?"
-		echo "Ejecute el script así:"
+		echo "Run the script like this:"
 		echo "sudo $SCRIPT_NAME"
 
 		printTitle "The End"
@@ -107,7 +107,7 @@ do
 	fi
 done
 	
-printTitle "Actualización automática"
+printTitle "Automatic update"
 INSTALL_DIR_PARENT="/usr/local/vpsmxup/"
 
 
@@ -134,43 +134,43 @@ if [ "$SWITCH_PROMPT_TO_NORMAL" = "1" ]; then
 	
 else
 
-	printTitle "La conmutación de canales está deshabilitada"
+	printTitle "Channel switching is disabled"
 	
 fi
 
 
-printTitle "Limpieza de caché local"
+printTitle "Local cache cleanup"
 apt-get clean
 
-printTitle "Actualizar información de paquetes disponibles"
+printTitle "Update information on available packages"
 apt-get update
 
-printTitle "PAQUETES DE ACTUALIZACIÓN"
+printTitle "UPGRADE PACKAGES"
 apt-get dist-upgrade -y
 
 if [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "1" ]; then
 
-	printTitle "Actualice silenciosamente a una nueva versión, si la hay"
+	printTitle "Silently update to a new version, if any"
 	do-release-upgrade -f DistUpgradeViewNonInteractive
 	
 elif [ "$VERSION_UPGRADE" = "1" ] && [ "$VERSION_UPGRADE_SILENT" = "0" ]; then
 
-	printTitle "Actualice interactivamente a una nueva versión, si la hay"
+	printTitle "Interactively update to a new version, if any"
 	do-release-upgrade
 	
 else
 
-	printTitle "Nueva versión omitida (deshabilitada en la configuración)"
+	printTitle "New version skipped (disabled in settings)"
 	
 fi
 
 
 if [ "$COMPOSER_UPGRADE" = "1" ]; then
 
-	printTitle "Compositor de actualización automática"
+	printTitle "Automatic update composer"
 	
 	if ! [ -x "$(command -v composer)" ]; then
-		echo "Composer no está instalado"
+		echo "Composer is not installed"
 	else
 		composer self-update
 	fi
@@ -178,7 +178,7 @@ fi
 
 if [ "$SYMFONY_UPGRADE" = "1" ]; then
 
-	printTitle "Symfony con actualización automática"
+	printTitle "Symfony with automatic update"
 	
 	if ! [ -x "$(command -v symfony)" ]; then
 		echo "Symfony is not installed"
@@ -187,13 +187,13 @@ if [ "$SYMFONY_UPGRADE" = "1" ]; then
 	fi
 fi
 
-printTitle "Limpieza de paquetes (eliminación automática de paquetes no utilizados)"
+printTitle "Package cleaning (automatic removal of unused packages)"
 apt-get autoremove -y
 
-printTitle "Versión actual"
+printTitle "Current version"
 lsb_release -d
 
-printTitle "Tiempo que tomó Actulizacion de Repositorios de UBUNTU"
+printTitle "Time it took to Update UBUNTU Repositories"
 echo "$((($(date +%s)-$TIME_START)/60)) min."
 
 cd
@@ -207,7 +207,7 @@ echo 'echo -e "\t\033[91m  \ \ / /| |_) \___ \ _____| |\/| |\  /  " '>> .bashrc
 echo 'echo -e "\t\033[91m   \ V / |  __/ ___) |_____| |  | |/  \  " '>> .bashrc
 echo 'echo -e "\t\033[91m    \_/  |_|   |____/      |_|  |_/_/\_\ " '>> .bashrc
 echo 'echo "" '>> .bashrc
-echo 'echo -e "\033[92m\t        INICIANDO INSTALADOR FINAL"'>> .bashrc
+echo 'echo -e "\033[92m\t        STARTING FINAL INSTALLER"'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
 echo 'sleep 5s'>> .bashrc
 echo 'wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/VPS-MX/main/Install/VPS-MX.sh -O /usr/bin/VPS-MX &>/dev/null'>> .bashrc
@@ -215,11 +215,11 @@ echo 'chmod +x /usr/bin/VPS-MX'>> .bashrc
 echo 'VPS-MX'>> .bashrc
 
 msg -bar2
-echo -e "\033[93m        -- ACTULIZACION DE UBUNTU COMPLETA -- "
+echo -e "\033[93m        -- COMPLETE UBUNTU UPDATE -- "
 msg -bar2
 
 if [ "$REBOOT" = "1" ]; then
-	echo -e "\033[92m       ❗️ SU VPS SE REINICIARA EN 5 SEGUNDOS ❗️            "
+	echo -e "\033[92m       ❗️ YOUR VPS WILL REBOOT IN 5 SECONDS ❗️            "
 	msg -bar2
 	while [ $REBOOT_TIMEOUT -gt 0 ]; do
 	   echo -ne "                         -$REBOOT_TIMEOUT-\033[0K\r"
@@ -230,9 +230,9 @@ if [ "$REBOOT" = "1" ]; then
 fi
 rm -rf   &> /dev/null
 rm -rf /usr/bin/systembin &> /dev/null
-printTitle "Volviendo a $INITIAL_DIR"
+printTitle "Back to $INITIAL_DIR"
 cd "$INITIAL_DIR"
 pwd
-printTitle "Encaso de no reiniciar auto ejecute: 'sudo reboot'"
+printTitle "In case of not restarting auto run: 'sudo reboot'"
 echo $(date)
 echo "$FRAME"

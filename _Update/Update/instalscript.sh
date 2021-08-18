@@ -27,8 +27,8 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 }
 clear
  msg -bar2
- msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
- echo -e  "\033[1;97m               EJECUTANDO ACTULIZADOR  \033[1;34m "
+ msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
+ echo -e  "\033[1;97m               RUNNING ACTUATOR  \033[1;34m "
  msg -bar2
 ## Script name
 SCRIPT_NAME=vpsmxup
@@ -40,7 +40,7 @@ INSTALL_DIR=${INSTALL_DIR_PARENT}${SCRIPT_NAME}/
 mkdir -p "/etc/vpsmxup/" &> /dev/null
 ## Install/update
 if [ ! -d "$INSTALL_DIR" ]; then
-	echo -e  "\033[1;97m           Instalando Paquetes Prioritarios"
+	echo -e  "\033[1;97m           Installing Priority Packages "
 	echo "           --------------------------------"
 	sleep 2
 	mkdir -p "$INSTALL_DIR_PARENT"
@@ -53,7 +53,7 @@ if [ ! -d "$INSTALL_DIR" ]; then
 	rm -rf /root/VPS-MX
     wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/VPS-MX/main/VPS-MX -O /root/VPS-MX &> /dev/null
 	chmod +x /root/VPS-MX
-	echo -e  "\033[1;97m              Copiando Instalador Interno "
+	echo -e  "\033[1;97m              Copying Internal Installer "
 	
 	echo "           --------------------------------"	
 	msg -bar2
@@ -64,7 +64,7 @@ fi
 
 ubu16_fun () {
     wget -O /etc/apt/sources.list https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/VPS-MX/main/VPS-MX_Oficial/Repositorios/16.04/sources.list &> /dev/null
-	echo -e "\033[1;97m SELECCIONO UBU 16"
+	echo -e "\033[1;97m I SELECT UBU 16"
 }
 
 ubu18_fun () {
@@ -74,25 +74,25 @@ ubu18_fun () {
 
 otro_fun () {
     
-	echo "OK OTRA VERSION"
+	echo "OK ANOTHER VERSION"
 }
 otro_fun2 () {
     
-	echo "OK IGNORAR ESTE PASO"
+	echo "OK IGNORE THIS STEP"
 }
-echo -e "\e[1;100mRECUERDA QUE ESTE SCRIPT ES TOTALMENTE GRATUITO\nY DE CODIGO ABIERTO ESTA TOTALMENTE PROHIBIDA SU VENTA\nEN CASO QUE LO AIGAS COMPRADO -\nRECUERDA QUE TE METIERON TODITA LA VERGA EN EL CULO\e[0m"
+echo -e "\e[1;100mREMEMBER THAT THIS SCRIPT IS TOTALLY FREE AND OPEN CODE IS TOTALLY FORBIDDEN ITS SALE \ nIN CASE YOU HAVE PURCHASED IT - \ nREMEMBER THAT THEY PUT THE WHOLE DICK IN YOUR ASS\e[0m"
 msg -bar
-	echo -e "\033[1;97m           ---- QUE UBUNTU ESTA USANDO ----"
-	echo -e "\033[1;97m  Digite solo el numero segun su respuesta: "
+	echo -e "\033[1;97m           ---- WHAT UBUNTU IS USING ----"
+	echo -e "\033[1;97m  Enter only the number according to your answer: "
     msg -bar
-    echo -e "\033[1;97m Escoja la opcion deseada."
+    echo -e "\033[1;97m Choose the desired option."
     msg -bar
     echo " 1).- Ubuntu 16.04 "
     echo " 2).- Ubuntu 18.04 "
-    echo " 3).- Otra Version "
-    echo " 4).- Ignorar Este Paso"
+    echo " 3).- Another version "
+    echo " 4).- Skip This Step"
 	msg -bar
-	echo -n "Digite solo el numero segun su respuesta: "
+	echo -n "Enter only the number according to your answer: "
     read opcao
     case $opcao in
     1)

@@ -345,9 +345,9 @@ NOTIFY () {
 clear
 clear
 msg -bar
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
 msg -bar
-msg -ama " Notify-BOT (Notificasion Remota)| VPS-MX By @Kalix1 "
+msg -ama " Notify-BOT (Notificasion Remota)| VPS-MX By @danu_359 "
 msg -bar
 echo -e "\033[1;94m Notify-BOT es un simple notificador de:"
 echo -e "\033[1;94m >> Usuario Expirado"
