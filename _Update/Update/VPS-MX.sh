@@ -37,11 +37,11 @@ AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCO
 }
 ### PAQUETES PRINCIPALES 
 msg -bar2
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
 msg -bar
 echo -e "\033[97m"
-echo -e "  \033[41m    -- INSTALACION DE PAQUETES PARA VPS-MX --    \e[49m"
-echo -e "  \033[100m     PONER ATENCION  PARA SIGUIENTE PREGUNTA     "
+echo -e "  \033[41m    -- INSTALLATION OF PACKAGES FOR VPS-MX --    \e[49m"
+echo -e "  \033[100m     PAY ATTENTION TO THE NEXT QUESTION     "
 echo -e "\033[97m"
 msg -bar
 
@@ -146,18 +146,18 @@ service apache2 restart > /dev/null 2>&1
 echo -e "\033[97m    # apt-get install apache2......... $ESTATUS "
 msg -bar2
 
-read -t 20 -n 1 -rsp $'\033[1;39m Preciona Enter Para continuar\n'
+read -t 20 -n 1 -rsp $'\033[1;39m Press Enter To continue\n'
 clear
 ### FIXEADOR PARA SISTEMAS 86_64
 idfix64_86 () {
 clear
 clear
 msg -bar2
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
 msg -bar2
 echo ""
-echo -e "\e[91m   INSTALACION SEMI MANUAL DE PAQUETES "
-echo -e "\e[91m(En caso de pedir confirmacion escoja: #y#) \e[0m"
+echo -e "\e[91m   SEMI MANUAL INSTALLATION OF PACKAGES "
+echo -e "\e[91m(In case of requesting confirmation choose: #y#) \e[0m"
 echo ""
 sleep 7s
 apt-get update; apt-get upgrade -y
@@ -176,10 +176,10 @@ clear
 clear
 clear
 msg -bar2
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
 msg -bar2
 echo ""
-echo -e "\e[91mESCOJER PRIMERO #All locales# Y LUEGO #en_US.UTF-8# \e[0m" 
+echo -e "\e[91mCHOOSE FIRST #All locales# Y LUEGO #en_US.UTF-8# \e[0m" 
 echo ""
 sleep 7s
  export LANGUAGE=en_US.UTF-8\
@@ -194,14 +194,14 @@ clear
 clear
 clear
 msg -bar2
-msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+msg -ama "     [ VPS - MX - SCRIPT \033[1;97m ❌ MOD By @danu_359 ❌\033[1;33m ]"
 msg -bar2
-echo -e "\033[1;97m  ¿PRECENTO ALGUN ERROR ALGUN PAQUETE ANTERIOR?" 
+echo -e "\033[1;97m  ¿PREVIOUS SOME ERROR SOME PREVIOUS PACKAGE?" 
 msg -bar2
-echo -e "\033[1;32m 1- Escoja:(N) No. Para Instalacion Normal"
-echo -e "\033[1;31m 2- Escoja:(S) Si. Saltaron errores."
+echo -e "\033[1;32m 1- Choose:(N) No. For Normal Installation"
+echo -e "\033[1;31m 2- Choose:(S) Yes. Errors jumped."
 msg -bar2
-echo -e "\033[1;39m Al preciona enter continuara la instalacion Normal"
+echo -e "\033[1;39m Pressing enter will continue the Normal installation"
 msg -bar2
 read -p " [ S | N ]: " idfix64_86   
 [[ "$idfix64_86" = "s" || "$idfix64_86" = "S" ]] && idfix64_86
@@ -246,14 +246,14 @@ clear
 msg -bar2
 msg -bar2
 figlet "    -VPS MX-" | lolcat 
-echo -e "     ESTE SCRIPT ESTA OPTIMIZADO A IDIOMA ESPAÑOL"
+echo -e "     THIS SCRIPT IS OPTIMIZED TO SPANISH LANGUAGE"
 msg -bar2
 pv="$(echo es)"
 [[ ${#id} -gt 2 ]] && id="es" || id="$pv"
 byinst="true"
 }
 install_fim () {
-msg -ama "               Finalizando Instalacion" && msg bar2
+msg -ama "               Finishing Installation" && msg bar2
 #rm -rf /etc/VPS-MX/controlador/nombre.log &>/dev/null
 [[ $(find /etc/VPS-MX/controlador -name nombre.log|grep -w "nombre.log"|head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/VPS-MX/main/VPS-MX_Oficial/ArchivosUtilitarios/nombre.log &>/dev/null
 [[ $(find /etc/VPS-MX/controlador -name IDT.log|grep -w "IDT.log"|head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/VPS-MX/main/VPS-MX_Oficial/ArchivosUtilitarios/IDT.log &>/dev/null
